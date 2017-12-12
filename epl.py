@@ -14,12 +14,13 @@ data = resp.json()
 # write some key data points to csv file for analysis
 with open('eplout.csv','w') as outfile:
     writer = csv.writer(outfile)
-    writer.writerow(('Name','Goals','Form','PointsPerGame', 'Value'))
-    for x in range(0, 576):
+    writer.writerow(('Name','Goals','Form','PointsPerGame','Minutes', 'Price'))
+    for i in range(len(data["elements"])):        
         writer.writerow((
-        data["elements"][x]["web_name"],
-        data["elements"][x]["goals_scored"],
-        data["elements"][x]["form"],
-        data["elements"][x]["points_per_game"],
-        data["elements"][x]["now_cost"]))
+        data["elements"][i]["web_name"],
+        data["elements"][i]["goals_scored"],
+        data["elements"][i]["form"],
+        data["elements"][i]["points_per_game"],
+        data["elements"][i]["minutes"],
+        data["elements"][i]["now_cost"]))
     
