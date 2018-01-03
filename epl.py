@@ -24,3 +24,5 @@ with open('eplout.csv','w') as outfile:
         data["elements"][i]["minutes"],
         data["elements"][i]["now_cost"]))
     
+# This data is then used to generate the following Visualization:
+# https://public.tableau.com/profile/david.lloyd#!/vizhome/EPL_14/EnglishPremierLeagueFantasy
